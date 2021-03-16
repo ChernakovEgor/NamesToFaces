@@ -13,6 +13,8 @@
 		741651AB25FF7DB9009DC6C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741651A925FF7DB9009DC6C4 /* Main.storyboard */; };
 		741651AD25FF7DBA009DC6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741651AC25FF7DBA009DC6C4 /* Assets.xcassets */; };
 		741651B025FF7DBA009DC6C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741651AE25FF7DBA009DC6C4 /* LaunchScreen.storyboard */; };
+		741651BD25FF9CA9009DC6C4 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741651BC25FF9CA9009DC6C4 /* PersonCell.swift */; };
+		74BCA365260098EE0057C5DF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BCA364260098EE0057C5DF /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		741651AC25FF7DBA009DC6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		741651AF25FF7DBA009DC6C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		741651B125FF7DBA009DC6C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		741651BC25FF9CA9009DC6C4 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		74BCA364260098EE0057C5DF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				741651AC25FF7DBA009DC6C4 /* Assets.xcassets */,
 				741651AE25FF7DBA009DC6C4 /* LaunchScreen.storyboard */,
 				741651B125FF7DBA009DC6C4 /* Info.plist */,
+				741651BC25FF9CA9009DC6C4 /* PersonCell.swift */,
+				74BCA364260098EE0057C5DF /* Person.swift */,
 			);
 			path = NamesToFaces;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74BCA365260098EE0057C5DF /* Person.swift in Sources */,
 				741651A825FF7DB9009DC6C4 /* ViewController.swift in Sources */,
 				741651A425FF7DB9009DC6C4 /* AppDelegate.swift in Sources */,
+				741651BD25FF9CA9009DC6C4 /* PersonCell.swift in Sources */,
 				741651A625FF7DB9009DC6C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
