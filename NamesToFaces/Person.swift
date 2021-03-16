@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Person: NSObject {
+class Person: NSObject, Codable {
     var image: String
     var name: String
 

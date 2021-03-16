@@ -14,6 +14,15 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPerson))
+        
+        if let peopleData = UserDefaults.standard.value(forKey: "people") as? Data {
+            let decoder = JSONDecoder()
+            if let decodedPeople = try? decoder.decode([Person].self, from: peopleData) {
+                people = decodedPeople
+            } else {
+                print("Failed to load people.")
+            }
+        }
     }
     
     @objc func addPerson() {
@@ -37,6 +46,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         }
         
         let person = Person(name: "Unknown", image: imageName)
+        save()
         people.append(person)
         collectionView.reloadData()
         
@@ -75,10 +85,20 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             [weak self, weak ac] _ in
             guard let newName = ac?.textFields?[0].text else { return }
             person.name = newName
+            self?.save()
             self?.collectionView.reloadData()
         })
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)
+    }
+    
+    func save() {
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(people) {
+            UserDefaults.standard.set(savedData, forKey: "people")
+        } else {
+            print("Failed to save people.")
+        }
     }
 }
 
